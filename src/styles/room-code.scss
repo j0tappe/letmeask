@@ -2,12 +2,13 @@
     height: 40px;
     border-radius: 8px;
     overflow: hidden;
-
+    
     background: #FFF;
     border: 1px solid #835afd;
     cursor: pointer;
 
     display: flex;
+    align-items: stretch;
 
     div {
         background: #835afd;
