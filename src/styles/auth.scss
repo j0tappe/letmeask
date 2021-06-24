@@ -3,6 +3,22 @@
     align-items: stretch;
     height: 100vh;
 
+    &.dark {
+        background: #121213;
+        aside {
+            background: #3e2880;
+        }
+
+        main {
+            .main-content {
+                .onOff {
+                    background: #FFF;
+                    color: #57575a
+                }
+            }
+        }
+    }
+
     aside {
         flex: 7;
 
@@ -31,6 +47,8 @@
             margin-top: 16px;
             color: #f8f8f8;
         }
+
+        
     }
 
     main {
@@ -50,6 +68,24 @@
         max-width: 320px;
         align-items: stretch;
         text-align: center;
+
+        .onOff {
+            width: 100px;
+            margin-bottom: 20px;
+            height: 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            background: #3e2880;
+            color: #FFF;
+            display: flex;
+            
+            justify-content: center;
+            align-self: center;
+            align-items: center;
+            
+            cursor: pointer;
+            border: 0;
+        }
 
         > img {
             align-self: center;
