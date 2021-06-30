@@ -3,22 +3,6 @@
     align-items: stretch;
     height: 100vh;
 
-    &.dark {
-        background: #121213;
-        aside {
-            background: #3e2880;
-        }
-
-        main {
-            .main-content {
-                .onOff {
-                    background: #FFF;
-                    color: #57575a
-                }
-            }
-        }
-    }
-
     aside {
         flex: 7;
 
@@ -76,7 +60,7 @@
             border-radius: 8px;
             font-weight: 500;
             background: #3e2880;
-            color: #FFF;
+            color: #fff;
             display: flex;
             
             justify-content: center;
@@ -176,4 +160,23 @@
             margin-left: 16px;
         }
     }
+
+    &.dark {
+        background: #121213;
+        aside {
+            background: #3e2880;
+        }
+
+        .main-content {
+            .onOff {
+                background: #FFF;
+                color: #57575a
+            }
+        }
+
+        h2 {
+            color: #d2d2d2;
+        }
+    }
+
 }

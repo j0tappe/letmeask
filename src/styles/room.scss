@@ -3,6 +3,24 @@
         padding: 24px;
         border-bottom: 1px solid #e2e2e2;
 
+        .onOff {
+            width: 100px;
+            margin-bottom: 20px;
+            height: 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            background: #3e2880;
+            color: #fff;
+            display: flex;
+            
+            justify-content: center;
+            align-self: center;
+            align-items: center;
+            
+            cursor: pointer;
+            border: 0;
+        }
+
         .content {
             max-width: 1120px;
             margin: 0 auto;
@@ -50,6 +68,7 @@
                 font-size: 14px;
             }
         }
+
 
         form {
             textarea {
@@ -108,5 +127,34 @@
         .question-list {
             margin-top: 32px;
         }
+    }
+
+    &.dark {
+        background-color: #151519;
+            
+        header {
+          background-color: #151519 !important;
+          border-bottom: 1px solid #3a3a3f;
+        }
+
+        main {
+            .room-title {    
+                h1 {
+                    color: #d2d2d2;
+                }       
+            }
+
+            form {
+                .form-footer {
+                       
+                    .user-info {
+                        span {
+                            color: #d2d2d2;
+                        }
+                    }                    
+                }
+            }
+
+        }       
     }
 }

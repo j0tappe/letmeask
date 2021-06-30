@@ -4,6 +4,7 @@ import { FormEvent, useState } from 'react';
 import illustrationImg from '../assets/images/illustration.svg'
 import logoImg from '../assets/images/logo.svg';
 import googleIconImg from '../assets/images/google-icon.svg';
+import nightImg from '../assets/images/night-mode.png';
 
 import { database } from '../services/firebase';
 
@@ -59,7 +60,11 @@ export function Home() {
             </aside>
             <main>
                 <div className="main-content">
-                    <button className="onOff" onClick={toggleTheme}>Modo {theme}</button>
+                    <button 
+                    className="onOff"
+                    onClick={toggleTheme}>Modo {theme}
+                    
+                    </button>
                     <img src={logoImg} alt="Letmeask" />
                     <button onClick={handleCreateRoom} className="create-room">
                         <img src={googleIconImg} alt="Logo do Google" />

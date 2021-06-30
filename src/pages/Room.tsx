@@ -12,15 +12,16 @@ import { database } from '../services/firebase';
 
 import '../styles/room.scss';
 
- 
+import { useTheme } from '../hooks/useTheme';
+
 type RoomParams = {
     id: string;
 }
 
 
-
 export function Room() {
     const { user, signInWithGoogle } = useAuth();
+    const { toggleTheme, theme } = useTheme();
     const params = useParams<RoomParams>();
     const [newQuestion, setNewQuestion] = useState('');
     const roomId = params.id;   
@@ -70,11 +71,14 @@ export function Room() {
     }
 
     return (
-        <div id="page-room">
+        <div id="page-room" className={theme}>
             <header>
                 <div className="content">
                     <img src={logoImg} alt="Letmeask" />
-                    <RoomCode code={roomId} />
+                    <div>
+                        <button className="onOff" onClick={toggleTheme}>Modo {theme}</button>
+                        <RoomCode code={roomId} />
+                    </div>
                 </div>
             </header>
 

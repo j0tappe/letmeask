@@ -22,7 +22,12 @@ export function ThemeContextProvider(props: ThemeContextProviderProps) {
 
     useEffect(() => {
         localStorage.setItem('theme', currentTheme);
-    }, [currentTheme])
+        if(currentTheme === 'light'){
+          document.body.classList.remove('dark')
+        }else{
+          document.body.classList.add(currentTheme)
+        }
+      }, [currentTheme])
 
     function toggleTheme() {
         setCurrentTheme(currentTheme === 'light' ? 'dark' : 'light');
