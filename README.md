@@ -34,10 +34,6 @@ git clone https://github.com/j0tappe/letmeask.git
 yarn install
 # ou
 npm install
-#Nookies
-yarn add nookies
-# ou
-npm install nookies
 #SASS
 yarn add sass
 # ou
